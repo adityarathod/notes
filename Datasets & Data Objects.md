@@ -1,0 +1,119 @@
+# Datasets & Data Objects
+#wiki #cs4375 #opre3360 
+
+A **data object** is a set of **attributes** that capture the basic characteristics of an object. ^fcc5b5
+
+A **dataset** is a collection of **data objects**.
+
+## Key characteristics
+### Dimensionality
+- Also known as number of [[Attributes|attributes]]
+- High-dimensional data may be challenging to work with
+    - This is why an important reason why we may preprocess data is to reduce its dimensionality
+
+### Sparsity
+- Some attributes have values of zero mostly, meaning only non-zero values need to be manipulated
+- Saves time and storage
+
+### Resolution
+- Often possible to change the granularity at which data is given
+- Too fine: pattern may be hidden/may be buried in noise
+- Too coarse: pattern may disappear
+
+## Quality
+The quality of a dataset is important when drawing conclusions from it. Poor data quality negatively impacts data processing. Some things that lower a datasets quality are listed below.
+
+### Noise
+
+^cbcc83
+
+- Slightly incorrect data due to measurement error
+- Can refer to:
+    - Extraneous objects
+    - Modified attributes (i.e. voice distortion)
+
+### Outliers
+
+^a46391
+
+- Objects with vastly different characteristics than most of the others
+- May or may not be useful:
+    - Useful: The goal of our analysis (e.g. credit card fraud)
+    - Not useful: Interferes with our data analysis and adds noise to the data
+
+### Missing values
+- Reasons:
+    - Information is not collected (e.g. people decline giving age or weight)
+    - Attributes may not be applicable to all cases (e.g. children have no annual income)
+- How to handle:
+    - Ignore the missing values
+    - Eliminate data objects or variables
+    - Estimate missing values
+
+### Duplicate Data
+- Data objects that are the same or close to being the same
+- Two main issues to address:
+    - If the two represent one object, inconsistent values must be resolved
+    - Be careful not to remove/combine similar but non-duplicate data objects
+
+## Types
+### Record
+- Data that is a collection of records, each with a fixed set of attributes
+
+#### Data matrix
+- If data objects have the same fixed set of numeric attributes, we can think of each object as a point in multi-dimensional space
+- Each attribute is a separate dimension
+- Row: an object
+- Column: a numeric attribute of the object
+- Value: value of the attribute
+
+#### Document data
+
+^447fec
+
+- Each document becomes a vector of terms (where each term is a component/attribute of the vector)
+- Row: a document
+- Column: a word in the set of terms of interest
+- Value: number of times the term appears in the document
+
+#### Transaction data
+- Each record is a transaction with a set of items (e.g. items purchased in a transaction)
+- Row: a transaction
+- Column: id + set of items
+- Value: see column
+
+### Graph
+- A powerful way to capture connected data
+
+#### Web
+- The graph captures relationships among data objects
+- For example: doc A refers to doc B, etc.
+
+#### Intrinsically graphs (molecules)
+- The graph shows data objects which are represented as graphs themselves
+- For example: literal molecules, graph structures
+
+### Ordered data
+#### Sequential transaction
+- For some types of data, the attributes have relationships that involve order in time or space
+- An extension of record data where each record has a time associated with it
+- Row: an object
+- Column: id + set of (time, item) tuples
+- Value: see column
+
+#### Sequence
+- A series of individual entities (i.e. words or letters)
+- Similar to sequential transaction data, but no time stamps, just positions
+
+#### Spatial
+- Objects that have spatial attributes, such as positions
+- For example: spatial temperature data (world temps)
+
+## Example
+| Student ID | Year      | GPA  |
+| ---------- | --------- | ---- |
+| 1234       | Freshman  | 3.24 |
+| 5678       | Sophomore | 4.00 | 
+
+Each row is a Student **data object**, with various attributes.
+The **dataset** makes up the entire table.

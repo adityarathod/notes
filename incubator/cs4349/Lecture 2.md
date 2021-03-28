@@ -1,0 +1,102 @@
+# Lecture 2
+#lecture #cs4349
+
+Date: 1/25/21
+
+# Analyzing Insertion Sort
+
+- **Running time** = the number of *primitive operations* (steps) executed for a particular input
+- We assume a constant time $c_i$ for the execution of the $i^\text{th}$ line
+    - This is because not all actions may have the same cost at the hardware level
+- Refer to [1/20/21: Intro and Lecture 1](Lecture%201.md) for the pseudocode of insertion sort
+- Thus, the running time of insertion sort is:
+
+$$\sum_{\text{all statements}}{\left( \text{cost of statement} \right) \cdot \left(\text{number of times statement is executed}\right)}$$
+
+- As such, the running time $T(n)$ of insertion sort is:
+
+$$T(n) = c_1 n + c_2 (n-1) + c_4 (n-1) + c_5 \sum_{j=2}^{n}{t_j}+ c_6 \sum_{j=2}^{n}{(t_j -1)}+ c_7 \sum_{j=2}^{n}{(t_j -1)} + c_8 (n-1)$$
+
+# Best-case, worst-case, and average-case analysis
+
+- Best case is when array is already sorted, so $T(n)$ simplifies to $T(n)=an+b$, which is a linear function of $n$
+- Worst case is when array is in reverse sorted order, so $T(n)$ simplifies to $T(n)=an^2+bn+c$, which is a quadratic function of $n$
+- Average case is somewhere in between, so it's a good idea to concentrate on the worst-case running time, which provides the upper bound on the complexity
+
+# Order of growth
+
+- The order of a running-time function is the fastest-growing term while discarding constants
+- For example, insertion sort is:
+    - Best case: $an+b \rightarrow \Theta(n)$
+    - Worst case: $an^2+bn+c \rightarrow \Theta(n^2)$
+
+# Designing algorithms
+
+- Divide-and-conquer approach
+    - Divide the problem into smaller subproblems
+    - Conquer subproblems by solving them recursively
+    - Combine subproblem solutions
+
+## Divide-and-conquer example: merge sort
+
+- Here's how merge sort uses divide-and-conquer:
+    - Divides *n*-element sequence into two *n/2* subsequences
+    - Conquers the subsequences by recursively calling merge itself
+    - Combines subproblems by merging the subsequences to produce the sorted answer
+
+```
+MergeSort(A, p, r)
+	if p < r:
+		q = floor((p+r) / 2)
+		MergeSort(A, p, q)
+		MergeSort(A, q+1, r)
+		Merge(A, p, q, r)
+
+Merge(A, p, q ,r)
+	n1 = q - p + 1
+	n2 = r - q
+	let L[1...n1 + 1] and R[1...n2 + 1] be new arrays
+	for i = 1 to n1:
+		L[i] = A[p+i-1]
+	for j = 1 to n2:
+		R[j] = A[q+j]
+	L[n1 + 1] = infinity
+	L[n2 + 1] = infinity
+	i = 1
+	j = 1
+	for k = p to r:
+		if L[i] <= R[j]:
+			A[k] = L[i]
+			i += 1
+		else if A[k] = R[j]:
+			j += 1
+```
+
+### Divide-and-conquer analysis
+
+- A recurrence for the running time of a divide-and-conquer algorithm is obtained using its three steps
+- If the problem is small enough (n  ≤ c for some const c), the straightforward solution takes constant time $\Theta (1)$
+- Division of the problem leads to *a* subproblems, each *1/b* size
+    - It takes T(n/b) to solve a subproblem of size n/b, so it takes aT(n/b) to solve a subproblems of that size
+- If we take D(n) time to divide the problem and C(n) time to combine the solutions, the recurrence for divide-and-conquer is:
+
+$$T(n) = \begin{cases}
+\Theta(1) & \text{if } n \leq c,\\
+aT(n/b) + D(n) + C(n) & \text{otherwise.}
+\end{cases}$$
+
+- For merge sort, here are the values:
+    - a = 2, b = 2, because we split the problem in half into two subproblems
+    - D(n) is constant time [O(1)] because we're just doing math to find out where to split
+    - C(n) is linear time [O(n)] because we iterate through the entire array
+- Thus, for merge sort this simplifies to:
+
+$$T(n) = \begin{cases}
+\Theta(1) & \text{if } n = 1,\\
+2T(n/2) + cn & \text{if } n \geq 1.
+\end{cases}$$
+
+- Now, we visualize the recursion tree for some number of values *n*
+    - The depth of the recursion tree times the per-level cost will give us the complexity
+- For merge sort, the recursion tree has $\log (n)+1$ levels, each costing $cn$, for a total cost of $cn\left(\log(n)+1\right) = cn\log(n) + cn$
+    - Thus, the total complexity is $\Theta (n \log n)$
