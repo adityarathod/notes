@@ -1,23 +1,47 @@
 # 3377 Class Index
 #index #cs3377 
 
-## Week 4
-### Batteries Not Included
+## (11) Batteries Not Included
 - [[Include Paths]]
 - [[Command Line Argument Types]]
 - [[Templatized C++ Command Line Parser (TCLAP)]]
 
-### Space Cowboys and NASA
+## (12) Space Cowboys and NASA
 - [[C++ File IO]]
 - [[Tarballs]]
 - [[g++ Compiler Options]]
 - [[UNIX Permissions and chmod]]
 
-## Week 5
-### 2010: The Year We Make Contact
+## (14) 2010: The Year We Make Contact
 - [[Touch]]
 - [[Make]]
 - [[Makefile]]
 
-### Gawkward
-- [[Gawkward]] (incubating)
+## (15) The Way You Make Me Feel
+- [[Make]]
+- [[Makefile]]
+
+## (16) Gawkward
+- [[GNU Awk]]
+- [[Pipe Streams in C]]
+
+## (17) Infinite
+- [[GNU M4]]
+- [[Autoconf]]
+- [[Source Control Management (SCM)]]
+- [[Formal Language Theory]]
+- [[Regular Expression]]
+- [[State Machine]]
+
+## (18) Analyze This
+- [[State Machine]]
+- [[Tokenizer]]
+- [[GNU Flex]]
+
+## (19) Flex
+- [[Tokenizer]]
+- [[GNU Flex]]
+- [[Makefile]]
+
+## (23) The Librarians
+- [[The Librarians]] (incubating)

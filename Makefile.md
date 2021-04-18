@@ -18,5 +18,15 @@ myClass.o: myFile.h myFile.cc
   g++ -c myFile.cc
 ```
 
+## Implicit Rules
+[[Make]] has implicit rules for these things, among others:
+- object files
+- [[GNU Flex]] files
+
+## Chained Rules
+Chained rules are Make rules that can be applied in sequence to make a target. For example, `n.o` can be made from `n.l` by running [[GNU Flex]] and then [[GNU Compiler Collection (gcc)|GCC]].
+
+Since intermediate files may be created in this chain, Make deletes these once it's done (to clean up after itself). However, this may be overridden with the `.PRECIOUS` target.
+
 ## Testing
 You can use [[Touch]] to test these (by making targets out of date).
