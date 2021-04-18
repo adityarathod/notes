@@ -8,7 +8,17 @@
 	},
 	"files.defaultLanguage": "markdown",
 	"files.exclude": {
-		"**/node_modules": true
+		"_config.yml": true,
+		"_layouts": true,
+		"_site": true,
+		".obsidian": true,
+		".sass-cache": true,
+		".trash": true,
+		".vscode": true,
+		"**/node_modules": true,
+		"404.html": true,
+		"assets": true,
+		"Gemfile*": true
 	},
 	"files.watcherExclude": {
 		"**/node_modules": true
