@@ -1,4 +1,5 @@
 # Binarization
+
 A [[data-preprocessing]] method that converts a discrete attribute to one or more binary attributes.
 
 ## Methods

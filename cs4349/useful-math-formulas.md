@@ -1,3 +1,8 @@
+---
+layout: math
+tags: ["wiki", "cs4349"]
+---
+
 # Useful Math Formulas
 #wiki #cs4349 
 

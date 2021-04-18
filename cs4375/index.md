@@ -1,4 +1,4 @@
-# 4375 Class Index
+# CS 4375 - Intro to Machine Learning
 #index #cs4375 
 
 ## Chapter 1
@@ -30,10 +30,10 @@ Things discussed:
 [types-of-ml]: types-of-ml.md "Types of Machine Learning"
 [datasets-and-data-objects]: datasets-and-data-objects.md "Datasets & Data Objects"
 [attributes]: attributes.md "Attributes"
-[similarity-and-dissimilarity-measures]: similarity-and-dissimilarity-measures.md "Similarity & Dissimilarity Measures"
+[similarity-and-dissimilarity-measures]: similarity-and-dissimilarity-measures.md "Similarity and Dissimilarity Measures"
 [euclidean-distance]: euclidean-distance.md "Euclidean Distance"
 [binary-vector-similarity]: binary-vector-similarity.md "Binary Vector Similarity"
-[cosine-similarity]: cosine-similarity.md "Cosine similarity"
+[cosine-similarity]: cosine-similarity.md "Cosine Similarity"
 [correlation-coefficient]: correlation-coefficient.md "Correlation Coefficient"
 [data-density]: data-density.md "Data Density"
 [data-preprocessing]: data-preprocessing.md "Data Preprocessing"

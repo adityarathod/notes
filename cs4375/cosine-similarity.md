@@ -1,4 +1,4 @@
-# Cosine similarity
+# Cosine Similarity
 #wiki #cs4375 
 
 For document vectors (see [[datasets-and-data-objects]]) $\mathbf{d}_1$  and $\mathbf{d}_2$, the **cosine similarity**  is defined as:

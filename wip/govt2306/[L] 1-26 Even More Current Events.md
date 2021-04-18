@@ -1,4 +1,4 @@
-# 1/26/21
+# Jan 26, 2021
 
 # Current Events
 

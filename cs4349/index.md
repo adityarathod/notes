@@ -1,4 +1,4 @@
-# CS 4349: Advanced Algorithms
+# CS 4349 - Advanced Algorithms
 #index #cs4349
 
 ## Chapter 1 & 2

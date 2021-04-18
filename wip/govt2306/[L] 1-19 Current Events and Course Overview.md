@@ -1,5 +1,4 @@
 ---
-date: 1/19/21
 title: Current Events & Course Overview
 ---
 

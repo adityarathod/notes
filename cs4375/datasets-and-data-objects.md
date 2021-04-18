@@ -101,6 +101,7 @@ The quality of a dataset is important when drawing conclusions from it. Poor dat
 - For example: spatial temperature data (world temps)
 
 ## Example
+
 | Student ID | Year      | GPA  |
 | ---------- | --------- | ---- |
 | 1234       | Freshman  | 3.24 |

@@ -1,3 +1,7 @@
+---
+layout: math
+---
+
 # Recurrences
 #wiki #cs4349 
 

@@ -1,3 +1,7 @@
+---
+layout: math
+---
+
 # Algorithms
 #wiki #cs4349 
 

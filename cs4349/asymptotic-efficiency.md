@@ -1,3 +1,7 @@
+---
+layout: math
+---
+
 # Asymptotic Efficiency
 #wiki #cs4349 
 
@@ -5,7 +9,7 @@ A method for analyzing the runtime of [[algorithms]]. Instead of focusing on the
 
 ## Expressing Efficiency
 ### Theta Notation
-$\Theta(g (n))$ is the set of functions such that there is some $f(n)$ and positive constants $c_1$, $c_2$, and $n_0$ that satisfy $0 \leq c_q g(n) \leq f(n) \leq c_2 g(n)$ for all $n \geq n_0$. When saying that $f(n) = \Theta(g(n))$, you're saying $f(n)$ belongs to the _set_ $\Theta(g(n))$.
+$\Theta(g (n))$ is the set of functions such that there is some $f(n)$ and positive constants $c_1$, $c_2$, and $n_0$ that satisfy $0 \leq c_1 g(n) \leq f(n) \leq c_2 g(n)$ for all $n \geq n_0$. When saying that $f(n) = \Theta(g(n))$, you're saying $f(n)$ belongs to the _set_ $\Theta(g(n))$.
 
 This is also called an *asymptotically tight bound* for $f(n)$. In essence, what this means is that $f(n)$ is bound to within constant multiples of a function $g(n)$.
 

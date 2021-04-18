@@ -1,4 +1,4 @@
-# UNIX Permissions and `chmod`
+# UNIX Permissions and chmod
 #wiki #cs3377 
 
 
