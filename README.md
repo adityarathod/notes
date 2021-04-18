@@ -1,5 +1,7 @@
-# adityarathod/notes
+This is a repository of notes taken throughout the second half of my undergraduate career. The software used to manage this vault of notes is Foam (was previously Obsidian).
 
-This is a repository of notes taken throughout my undergraduate career. The software used to manage this vault of notes is [Obsidian](https://obsidian.md).
+## Class Notes
+- [CS 3377](./cs3377/index.md)
+- [CS 4349](./cs4349/index.md)
+- [CS 4375](./cs4375/index.md)
 
-To get started: open the [000 Index](000%20Index.md) root note. Note that LaTeX, tags, wiki-style links, and a couple of other features will not work on GitHub's built-in viewer. I'm working on getting a web version up Soon&trade; when I find an alternative to Obsidian Publish that works on GitHub Pages.

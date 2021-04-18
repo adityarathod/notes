@@ -1,0 +1,7 @@
+title: "adityarathod/notes"
+theme: jekyll-theme-primer
+baseurl: /notes
+github_username: adityarathod
+
+readme_index:
+  enabled: true
